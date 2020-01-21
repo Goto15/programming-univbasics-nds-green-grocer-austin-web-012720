@@ -1,7 +1,19 @@
+require 'pp'
+
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+  found_item = {}
+  
+  for each in collection do
+    if each[:item] == name
+      found_item = each
+    end
+  end
+  
+  if found_item == {}
+    return nil
+  else
+    return found_item
+  end
 end
 
 def consolidate_cart(cart)
